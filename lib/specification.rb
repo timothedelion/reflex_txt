@@ -9,11 +9,7 @@ class Specification
   end
 
   def headers
-    definition.map(&:first)
-  end
-
-  def sizes
-    definition.map(&:second)
+    definition.map(&:first).map(&:to_sym)
   end
 
   def to_s
